@@ -2,14 +2,14 @@ pipeline {
 agent any
 stages {
 stage (checkout) {
-step {
+steps {
 git 'https://github.com/shubhmatre/Mavjen1.git' }
 }
 stage (compile) {
-step {
+steps {
 sh 'mvn install'
 }}
 stage (deploy) {
-step {
+steps {
 sh 'cp target/Mavjen1 /home/shubham/Documents/devops/apache-tomcat-9.0.93/webapps'
 }}}}
